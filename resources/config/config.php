@@ -7,7 +7,9 @@ return [
      */
     'id' => env('GOOGLE_TAG_MANAGER_ID', ''),
 
-    'environment' => env('GOOGLE_TAG_MANAGER_ENVIRONMENT', ''),
+    'env_enabled' => env('GOOGLE_TAG_MANAGER_ENV_ENABLED', false),
+    'env_auth' => env('GOOGLE_TAG_MANAGER_AUTH', ''),
+    'env_preview' => env('GOOGLE_TAG_MANAGER_ENVIRONMENT', ''),
     
     /*
      * Enable or disable script rendering. Useful for local development.
