@@ -173,4 +173,19 @@ class GoogleTagManager
     {
         return (new DataLayer($data))->toJson();
     }
+
+    public function isEnvEnabled()
+    {
+        return config('googletagmanager.envEnabled');
+    }
+
+    public function envAuth()
+    {
+        return config('googletagmanager.envAuth');
+    }
+
+    public function envPreview()
+    {
+        return config('googletagmanager.envPreview');
+    }
 }

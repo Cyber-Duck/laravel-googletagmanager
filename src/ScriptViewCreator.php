@@ -22,6 +22,9 @@ class ScriptViewCreator
         }
 
         $view
+            ->with('envEnabled', $this->googleTagManager->isEnvEnabled())
+            ->with('envAuth', $this->googleTagManager->envAuth())
+            ->with('envPreview', $this->googleTagManager->envPreview())
             ->with('enabled', $this->googleTagManager->isEnabled())
             ->with('id', $this->googleTagManager->id())
             ->with('dataLayer', $this->googleTagManager->getDataLayer())
